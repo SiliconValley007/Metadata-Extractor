@@ -30,7 +30,7 @@ import os
 
 def selectfile():
     try:
-        filename = fd.askopenfilename(initialdir="/", title="Select File to extract", filetypes=(("All Files", "*.*"),("PNG Files", "*.png"),("JPG Files", "*.jpg"),("JPEG Files", "*.jpeg"),))
+        filename = fd.askopenfilename(initialdir="/", title="Select File", filetypes=(("All Files", "*.*"),("PNG Files", "*.png"),("JPG Files", "*.jpg"),("JPEG Files", "*.jpeg"),))
         image_path_entry.delete(0, "end")
         image_path_entry.insert(0, filename)
     except AttributeError:
@@ -58,7 +58,7 @@ def extract_metadata():
 
 metadata = tk.Tk()
 metadata.title("Copier")
-metadata.geometry("350x150")
+metadata.geometry("360x150")
 metadata.config(bg="#ffffff")
 
 s = ttk.Style()
